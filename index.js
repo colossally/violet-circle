@@ -1,1 +1,1 @@
-console.log("Hello from JS!");
+document.querySelector('p').innerText = "Hello from JS!";
