@@ -1,1 +1,4 @@
-document.querySelector('p').innerText = "Hello from JS!";
+console.log("Script is running!");
+const paragraph = document.querySelector('p');
+console.log(paragraph);
+paragraph.innerText = "Hello from JS!";
