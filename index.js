@@ -1,2 +1,1 @@
-var carName ="Volvo";
-console.log(carName);
+console.log("Hello from JS!");
