@@ -5,25 +5,14 @@
         body {
             margin: 0;
             padding: 0;
-					  font-family: chelvetica
+   	    font-family: chelvetica
         }
 			
-			h2 {
-					font-size: 20px;
+	h2 {
+	font-size: 20px;
 			}
 	
-        table {
-            border-collapse: collapse;
-            width: 100%;
-        }
-
-        th, td {
-            border: 1px solid black;
-            padding: 8px;
-            text-align: left;
-        }
-
-        .header {
+       .header {
             text-align: center;
             padding: 20px;
         }
@@ -37,31 +26,26 @@
             text-align: center;
         }
 			
-			    .image-container {
+	.image-container {
         text-align: center;
         position: relative;
         margin-bottom: 20px; /* Adjust the value to control the spacing */
     }
 
- 	  .table-heading {
-        text-align: center;
-        margin-top: 30px; /* Adjust the value to control the spacing between the image and the heading */
-        margin-bottom: 10px; /* Adjust the value to control the spacing between the image and the heading */
-    }		
-			
+
     .button-section {
         text-align: center;
         margin-top: 20px;
     }
  
-		    .call-to-action {
+    .call-to-action {
         text-align: left;
         margin-top: 20px; /* Adjust the value to control the spacing from the table */
-				font-size: 15px;
+	font-size: 15px;
     }
 
     .call-to-action h2 {
-        margin-bottom: 10px; /* Adjust the value to control the spacing between the heading and the image */
+	margin-bottom: 10px; /* Adjust the value to control the spacing between the heading and the image */
     }
 
     .call-to-action img {
@@ -134,169 +118,6 @@
     <div class="image-container">
         <img src="https://violet-circle.com/wp-content/uploads/2023/06/Numbered-seating-plan-for-Conscious-Communication-Strategy-Three-Levels-Deep.png" alt="Image">
     </div>
-  <!-- Heading for the table -->
-<h2 class="table-heading">Seating Plan For Your Vibrational Marketing Communication Strategy</h2>
-	<table>
-        <thead>
-            <tr>
-                <th>Room</th>
-                <th>Row</th>
-                <th>Column</th>
-                <th>Description</th>
-                <th>Profile</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td rowspan="9">1a</td>
-                <td rowspan="3">2a</td>
-                <td>3a</td>
-                <td>{{ form.demo_yellow_room_prompt }}, {{ form.demo_first_row_prompt }}, {{ form.demo_first_column_prompt }}</td>
-                <td>1</td>
-            </tr>
-            <tr>
-                <td>3b</td>
-                <td>{{ form.demo_yellow_room_prompt }}, {{ form.demo_first_row_prompt }}, {{ form.demo_second_column_prompt }}</td>
-                <td>2</td>
-            </tr>
-            <tr>
-                <td>3c</td>
-                <td>{{ form.demo_yellow_room_prompt }}, {{ form.demo_first_row_prompt }}, {{ form.demo_third_column_prompt }}</td>
-                <td>3</td>
-            </tr>
-            <tr>
-                <td rowspan="3">2b</td>
-                <td>3a</td>
-                <td>{{ form.demo_yellow_room_prompt }}, {{ form.demo_second_row_prompt }}, {{ form.demo_first_column_prompt }}</td>
-                <td>4</td>
-            </tr>
-            <tr>
-                <td>3b</td>
-                <td>{{ form.demo_yellow_room_prompt }}, {{ form.demo_second_row_prompt }}, {{ form.demo_second_column_prompt }}</td>
-                <td>5</td>
-            </tr>
-            <tr>
-                <td>3c</td>
-                <td>{{ form.demo_yellow_room_prompt }}, {{ form.demo_second_row_prompt }}, {{ form.demo_third_column_prompt }}</td>
-                <td>6</td>
-            </tr>
-            <tr>
-                <td rowspan="3">2c</td>
-                <td>3a</td>
-                <td>{{ form.demo_yellow_room_prompt }}, {{ form.demo_third_row_prompt }}, {{ form.demo_first_column_prompt }}</td>
-                <td>7</td>
-            </tr>
-            <tr>
-                <td>3b</td>
-                <td>{{ form.demo_yellow_room_prompt }}, {{ form.demo_third_row_prompt }}, {{ form.demo_second_column_prompt }}</td>
-                <td>8</td>
-            </tr>
-            <tr>
-                <td>3c</td>
-                <td>{{ form.demo_yellow_room_prompt }}, {{ form.demo_third_row_prompt }}, {{ form.demo_third_column_prompt }}</td>
-                <td>9</td>
-            </tr>
-            <tr>
-                <td rowspan="9">1b</td>
-                <td rowspan="3">2a</td>
-                <td>3a</td>
-                <td>{{ form.demo_green_room_prompt }}, {{ form.demo_first_row_prompt }}, {{ form.demo_first_column_prompt }}</td>
-                <td>10</td>
-            </tr>
-            <tr>
-                <td>3b</td>
-                <td>{{ form.demo_green_room_prompt }}, {{ form.demo_first_row_prompt }}, {{ form.demo_second_column_prompt }}</td>
-                <td>11</td>
-            </tr>
-            <tr>
-                <td>3c</td>
-                <td>{{ form.demo_green_room_prompt }}, {{ form.demo_first_row_prompt }}, {{ form.demo_third_column_prompt }}</td>
-                <td>12</td>
-            </tr>
-            <tr>
-                <td rowspan="3">2b</td>
-                <td>3a</td>
-                <td>{{ form.demo_green_room_prompt }}, {{ form.demo_second_row_prompt }}, {{ form.demo_first_column_prompt }}</td>
-                <td>13</td>
-            </tr>
-            <tr>
-                <td>3b</td>
-                <td>{{ form.demo_green_room_prompt }}, {{ form.demo_second_row_prompt }}, {{ form.demo_second_column_prompt }}</td>
-                <td>14</td>
-            </tr>
-            <tr>
-                <td>3c</td>
-                <td>{{ form.demo_green_room_prompt }}, {{ form.demo_second_row_prompt }}, {{ form.demo_third_column_prompt }}</td>
-                <td>15</td>
-            </tr>
-            <tr>
-                <td rowspan="3">2c</td>
-                <td>3a</td>
-                <td>{{ form.demo_green_room_prompt }}, {{ form.demo_third_row_prompt }}, {{ form.demo_first_column_prompt }}</td>
-                <td>16</td>
-            </tr>
-            <tr>
-                <td>3b</td>
-                <td>{{ form.demo_green_room_prompt }}, {{ form.demo_third_row_prompt }}, {{ form.demo_second_column_prompt }}</td>
-                <td>17</td>
-            </tr>
-            <tr>
-                <td>3c</td>
-                <td>{{ form.demo_green_room_prompt }}, {{ form.demo_third_row_prompt }}, {{ form.demo_third_column_prompt }}</td>
-                <td>18</td>
-            </tr>
-            <tr>
-                <td rowspan="9">1c</td>
-                <td rowspan="3">2a</td>
-                <td>3a</td>
-                <td>{{ form.demo_orange_room_prompt }}, {{ form.demo_first_row_prompt }}, {{ form.demo_first_column_prompt }}</td>
-                <td>19</td>
-            </tr>
-            <tr>
-                <td>3b</td>
-                <td>{{ form.demo_orange_room_prompt }}, {{ form.demo_first_row_prompt }}, {{ form.demo_second_column_prompt }}</td>
-                <td>20</td>
-            </tr>
-            <tr>
-                <td>3c</td>
-                <td>{{ form.demo_orange_room_prompt }}, {{ form.demo_first_row_prompt }}, {{ form.demo_third_column_prompt }}</td>
-                <td>21</td>
-            </tr>
-            <tr>
-                <td rowspan="3">2b</td>
-                <td>3a</td>
-                <td>{{ form.demo_orange_room_prompt }}, {{ form.demo_second_row_prompt }}, {{ form.demo_first_column_prompt }}</td>
-                <td>22</td>
-            </tr>
-            <tr>
-                <td>3b</td>
-                <td>{{ form.demo_orange_room_prompt }}, {{ form.demo_second_row_prompt }}, {{ form.demo_second_column_prompt }}</td>
-                <td>23</td>
-            </tr>
-            <tr>
-                <td>3c</td>
-                <td>{{ form.demo_orange_room_prompt }}, {{ form.demo_second_row_prompt }}, {{ form.demo_third_column_prompt }}</td>
-                <td>24</td>
-            </tr>
-            <tr>
-                <td rowspan="3">2c</td>
-                <td>3a</td>
-                <td>{{ form.demo_orange_room_prompt }}, {{ form.demo_third_row_prompt }}, {{ form.demo_first_column_prompt }}</td>
-                <td>25</td>
-            </tr>
-            <tr>
-                <td>3b</td>
-                <td>{{ form.demo_orange_room_prompt }}, {{ form.demo_third_row_prompt }}, {{ form.demo_second_column_prompt }}</td>
-                <td>26</td>
-            </tr>
-            <tr>
-                <td>3c</td>
-                <td>{{ form.demo_orange_room_prompt }}, {{ form.demo_third_row_prompt }}, {{ form.demo_third_column_prompt }}</td>
-                <td>27</td>
-            </tr>
-        </tbody>
-    </table>
-
 	<!-- Button Section -->
 	
 	<div class="button-section">
