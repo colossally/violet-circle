@@ -1,0 +1,96 @@
+function(instance, properties, context) {
+  const cover = properties.cover;
+  const header = properties.header;
+  const body = properties.body;
+  const footer = properties.footer;
+
+  // Create an iframe and append it to the current page
+  const iframe = document.createElement('iframe');
+  iframe.style.display = 'none';
+  document.body.appendChild(iframe);
+
+  // Write the HTML content to the iframe
+  const iframeDocument = iframe.contentWindow.document;
+  iframeDocument.open();
+  iframeDocument.write(`
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Print Document</title>
+      <style>
+        body {
+          margin: 0;
+          font-family: Arial, sans-serif;
+        }
+
+        .cover {
+  		display: flex;
+  		align-items: center;
+  		justify-content: center;
+  		text-align: center;
+  		height: 100vh;
+  		flex-direction: column; /* Ensure cover elements are stacked vertically */
+		}
+
+
+
+        .body {
+          /* Add styles for the body content here */
+          padding: 20px;
+        }
+
+        .footer {
+  		background-color: #333;
+  		color: #fff;
+  		padding: 10px;
+  		text-align: center;
+  		position: fixed;
+  		bottom: -20px;
+  		width: 100%;
+		}
+
+		.header {
+		background-color: #333;
+  		color: #fff;
+ 		padding: 10px;
+ 		text-align: center;
+ 		position: fixed;
+ 		top: -20px;
+  		width: 100%;
+		}
+       .page-break {
+          page-break-after: always;
+        }
+      </style>
+    </head>
+	<body>
+	  <div class="cover">
+	    ${cover}
+	  </div>
+	  <div class="header">
+	    ${header}
+	  </div>
+	  <div class="body">
+	    ${body}
+	  </div>
+	  <div class="footer">
+	    ${footer}
+	  </div>
+	</body>
+    </html>
+  `);
+  iframeDocument.close();
+
+  // Trigger the print function in the iframe
+  iframe.contentWindow.print();
+
+  // Remove the iframe after a delay (adjust the delay as needed)
+  setTimeout(() => {
+    document.body.removeChild(iframe);
+
+    // Notify Bubble that the result is populated
+    instance.triggerEvent('result_populated');
+  }, 1000);
+}
