@@ -12,7 +12,7 @@
 
           .cover,
           .header,
-          .body,
+          .content,
           .bio,
           .footer {
             box-sizing: border-box;
@@ -21,7 +21,6 @@
 
           .cover,
           .header,
-          .bio,
           .footer {
             padding: 20px;
           }
@@ -35,10 +34,17 @@
             flex-direction: column; /* Ensure cover elements are stacked vertically */
           }
 
-          .body {
+          .content {
             /* Add styles for the body content here */
             padding: 50px 20px 50px 20px;
+            page-break-after: always; /* Add this line to ensure a page break after the body */
+          }
 
+          .bio {
+            color: #fff;
+            text-align: center;
+            background-color: #333;
+            page-break-after: always; /* Add this line to ensure a page break after the body */
           }
 
           .footer {
@@ -59,9 +65,6 @@
             width: 100%;
           }
 
-          .bio {
-            padding: 50px 20px 50px 20px;
-          }
 
           @media print {
             /* Set your own margins here */
@@ -86,8 +89,8 @@
         <div class="header">
           ${header}
         </div>
-        <div class="body">
-          ${body}
+        <div class="content">
+          ${content}
         </div>
         <div class="bio">
           ${bio}
