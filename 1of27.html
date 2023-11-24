@@ -1,99 +1,89 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Print Document</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-    }
+.container-fluid {
+  height: 100vh;
+  overflow-x: hidden;
+}
 
-    .cover,
-    .header,
-    .content,
-    .bio,
-    .footer {
-      box-sizing: border-box;
-      width: 100%;
-    }
+.col-12 {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
 
-    .cover,
-    .header,
-    .footer {
-      padding: 20px;
-    }
+.header {
+  position: sticky;
+  top: 0;
+  background: lightblue;
+}
 
-    .cover {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      height: 100vh;
-      flex-direction: column; /* Ensure cover elements are stacked vertically */
-    }
+.body {
+  flex: 1 1 auto;
+}
 
-    .content {
-      /* Add styles for the body content here */
-      padding: 50px 20px 50px 20px;
-    }
+.footer {
+  position: sticky;
+  bottom: 0;
+  background: lightblue;
+}
+<main class="container-fluid p-0">
+  <main class="row h-100">
 
-    .bio {
-      color: #fff;
-      text-align: center;
-      background-color: #333;
-    }
+    <section class="col-12">
 
-    .header {
-      background-color: #333;
-      color: #fff;
-      text-align: center;
-      position: sticky;
-      top: 0;
-      width: 100%;
-    } 
-    
-    .footer {
-      background-color: #333;
-      color: #fff;
-      text-align: center;
-      position: sticky;
-      bottom: 0;
-      width: 100%;
-    }
+      <div class="header bg-info w-100">
+        <h1>Welcome to FMail (flexbox)</h1>
+      </div>
 
-    @media print {
-      /* Set your own margins here */
-      @page {
-        margin: 0;
-      }
+      <div class="body bg-dark text-white p-0 w-100">
+        <h5>The main email box (should always occupy all space between header and footer)</h5>
+        <ul>
+          <li>Email 1</li>
+          <li>Email 2</li>
+          <li>Email 3</li>
+          <li>Email 4</li>
+          <li>Email 5</li>
+          <li>Email 6</li>
+          <li>Email 7</li>
+          <li>Email 8</li>
+          <li>Email 9</li>
+          <li>Email 10</li>
 
-      /* Adjust header and footer margins */
-      .header,
-      .footer {
-        margin: 0;
-      }
+          <li>Email ...</li>
+          <li>Email ...</li>
+          <li>Email ...</li>
+          <li>Email ...</li>
+          <li>Email ...</li>
+          <li>Email ...</li>
+          <li>Email ...</li>
+          <li>Email ...</li>
+          <li>Email ...</li>
+          <li>Email ...</li>
+          <li>Email ...</li>
+          <li>Email ...</li>
+          <li>Email ...</li>
+          <li>Email ...</li>
+          <li>Email ...</li>
+          <li>Email ...</li>
+          <li>Email ...</li>
+          <li>Email ...</li>
+          <li>Email ...</li>
+          <li>Email ...</li>
+          <li>Email ...</li>
+          <li>Email ...</li>
+          <li>Email ...</li>
+          <li>Email ...</li>
+          <li>Email ...</li>
+          <li>Email ...</li>
+          <li>Email ...</li>
+          <li>Email ...</li>
+          <li>Email ...</li>
 
-      /* If you want to make any specific adjustments for printing, you can add them here */
-    }
-  </style>
-</head>
-<body>
-  <div class="cover">
-    ${cover}
-  </div>
-  <div class="header">
-    ${header}
-  </div>
-  <div class="content">
-    ${content}
-  </div>
-  <div class="bio">
-    ${bio}
-  </div>
-  <div class="footer">
-    ${footer}
-  </div>
-</body>
-</html>
+      </div>
+
+      <div class="footer bg-info w-100">
+        <h5>I am the footer (should be fixed at bottom)</h5>
+      </div>
+
+    </section>
+
+  </main>
+</main>
