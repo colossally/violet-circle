@@ -1,67 +1,100 @@
     <!DOCTYPE html>
     <html lang="en">
-    <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Print Document</title>
-      <style>
-        body {
-          margin: 0;
-          font-family: Arial, sans-serif;
-        }
+      <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Print Document</title>
+        <style>
+          body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+          }
 
-	      .cover {
-  		display: flex;
-  		align-items: center;
-  		justify-content: center;
-  		text-align: center;
-  		height: 100vh;
-  		flex-direction: column; /* Ensure cover elements are stacked vertically */
-		}
+          .cover,
+          .header,
+          .body,
+          .bio,
+          .footer {
+            box-sizing: border-box;
+            width: 100%;
+          }
 
+          .cover,
+          .header,
+          .bio,
+          .footer {
+            padding: 20px;
+          }
 
+          .cover {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            height: 100vh;
+            flex-direction: column; /* Ensure cover elements are stacked vertically */
+          }
 
-        .body {
-          /* Add styles for the body content here */
-          padding: 20px;
-        }
+          .body {
+            /* Add styles for the body content here */
+            padding: 50px 20px 50px 20px;
 
-        .footer {
-  		background-color: #333;
-  		color: #fff;
-  		padding: -10px,0px,0px,0px;
-  		text-align: center;
-  		position: fixed;
-  		bottom: 0px;
-  		width: 100%;
-		}
+          }
 
-		.header {
-		background-color: #333;
-  		color: #fff;
- 		padding: 0px,-10px,0px,0px;
- 		text-align: center;
- 		position: fixed;
- 		top: 0px;
-  		width: 100%;
-		}
-       .page-break {
-          page-break-after: always;
-        }
-      </style>
-    </head>
-	<body>
-	  <div class="cover">
-	  <p>Cover</p>
-	  </div>
-	  <div class="header">
-	  <p>Header</p>
-	  </div>
-	  <div class="body">
-	  <p>Body</p>
-	  </div>
-	  <div class="footer">
-	  <p>Footer</p>
-	  </div>
-	</body>
+          .footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+          }
+
+          .header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            position: fixed;
+            top: 0;
+            width: 100%;
+          }
+
+          .bio {
+            padding: 50px 20px 50px 20px;
+          }
+
+          @media print {
+            /* Set your own margins here */
+            @page {
+              margin: 0;
+            }
+
+            /* Adjust header and footer margins */
+            .header,
+            .footer {
+              margin: 0;
+            }
+
+            /* If you want to make any specific adjustments for printing, you can add them here */
+          }
+        </style>
+      </head>
+      <body>
+        <div class="cover">
+        <p>Cover</p>
+        </div>
+        <div class="header">
+        <p>Header</p>
+        </div>
+        <div class="body">
+        <p>Body</p>
+        </div>
+        <div class="bio">
+        <p>Bio</p>
+        </div>
+        <div class="footer">
+         <p>Footer</p>
+        </div>
+        <script>
+      </body>
     </html>
