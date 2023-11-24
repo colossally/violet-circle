@@ -1,102 +1,101 @@
-    <!DOCTYPE html>
-    <html lang="en">
-      <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Print Document</title>
-        <style>
-          body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-          }
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Print Document</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
 
-          .cover,
-          .header,
-          .content,
-          .bio,
-          .footer {
-            box-sizing: border-box;
-            width: 100%;
-          }
+    .cover,
+    .header,
+    .content,
+    .bio,
+    .footer {
+      box-sizing: border-box;
+      width: 100%;
+    }
 
-          .cover,
-          .header,
-          .footer {
-            padding: 20px;
-          }
+    .cover,
+    .header,
+    .footer {
+      padding: 20px;
+    }
 
-          .cover {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            height: 100vh;
-            flex-direction: column; /* Ensure cover elements are stacked vertically */
-          }
+    .cover {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      height: 100vh;
+      flex-direction: column; /* Ensure cover elements are stacked vertically */
+    }
 
-          .content {
-            /* Add styles for the body content here */
-            padding: 50px 20px 50px 20px;
-            page-break-after: always; /* Add this line to ensure a page break after the body */
-          }
+    .content {
+      /* Add styles for the body content here */
+      padding: 50px 20px 50px 20px;
+      /* Removed page-break-after */
+    }
 
-          .bio {
-            color: #fff;
-            text-align: center;
-            background-color: #333;
-            page-break-after: always; /* Add this line to ensure a page break after the body */
-          }
+    .bio {
+      color: #fff;
+      text-align: center;
+      background-color: #333;
+      /* Removed page-break-after */
+    }
 
-          .footer {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-          }
+    .footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
 
-          .header {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            position: fixed;
-            top: 0;
-            width: 100%;
-          }
+    .header {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      position: fixed;
+      top: 0;
+      width: 100%;
+    }
 
+    @media print {
+      /* Set your own margins here */
+      @page {
+        margin: 0;
+      }
 
-          @media print {
-            /* Set your own margins here */
-            @page {
-              margin: 0;
-            }
+      /* Adjust header and footer margins */
+      .header,
+      .footer {
+        margin: 0;
+      }
 
-            /* Adjust header and footer margins */
-            .header,
-            .footer {
-              margin: 0;
-            }
-
-            /* If you want to make any specific adjustments for printing, you can add them here */
-          }
-        </style>
-      </head>
-      <body>
-        <div class="cover">
-          ${cover}
-        </div>
-        <div class="header">
-          ${header}
-        </div>
-        <div class="content">
-          ${content}
-        </div>
-        <div class="bio">
-          ${bio}
-        </div>
-        <div class="footer">
-          ${footer}
-        </div>
-      </body>
-    </html>
+      /* If you want to make any specific adjustments for printing, you can add them here */
+    }
+  </style>
+</head>
+<body>
+  <div class="cover">
+    ${cover}
+  </div>
+  <div class="header">
+    ${header}
+  </div>
+  <div class="content">
+    ${content}
+  </div>
+  <div class="bio">
+    ${bio}
+  </div>
+  <div class="footer">
+    ${footer}
+  </div>
+</body>
+</html>
